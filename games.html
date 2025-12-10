@@ -3,60 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شحن الألعاب</title>
+<title>متجر DIGITAL SIMO</title>
 <style>
-body { margin:0; padding:0; font-family:'Poppins',sans-serif; background: linear-gradient(135deg,#000,#001122); color:#fff; text-align:center;}
-.container { margin-top:50px; padding:20px;}
-img { width:300px; border-radius:10px; box-shadow:0 0 20px #00FFFF; margin-bottom:15px;}
-.btn { margin-top:10px; padding:12px 25px; background:linear-gradient(45deg,#00FFFF,#0080FF); color:#000; border:none; border-radius:10px; cursor:pointer; box-shadow:0 0 20px #00FFFF; transition: transform 0.3s, box-shadow 0.3s;}
-.btn:hover { transform:scale(1.05); box-shadow:0 0 30px #00FFFF;}
-.montages { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:30px; }
-.montage-card { display:flex; flex-direction:column; align-items:center; }
-.montages img { width:200px; height:120px; object-fit:cover; border-radius:10px; cursor:pointer; transition: transform 0.3s; }
-.montages img:hover { transform: scale(1.05); }
+body {
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    background: linear-gradient(135deg,#000,#001122);
+    color:#fff;
+    text-align:center;
+}
+h1 {
+    margin-top:20px;
+    color:#00FFFF;
+    text-shadow:0 0 15px #00FFFF;
+}
+.container {
+    margin-top:30px;
+    padding:20px;
+}
+.montages, .uc-cards, .offers {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+.montage-card, .uc-card, .offer-card {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background: rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 15px #00FFFF;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.montage-card:hover, .uc-card:hover, .offer-card:hover {
+    transform: scale(1.05);
+    box-shadow:0 0 25px #00FFFF;
+}
+.montages img, .uc-card img, .offer-card img {
+    width:200px;
+    height:120px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition: transform 0.3s;
+}
+.montages img:hover, .uc-card img:hover, .offer-card img:hover {
+    transform: scale(1.05);
+}
+.uc-card h3, .offer-card h3 {
+    color:#00FFFF;
+    margin:10px 0 5px;
+}
+.uc-card p, .offer-card p {
+    margin-bottom:10px;
+}
+.btn {
+    background: linear-gradient(45deg,#00FFFF,#0080FF);
+    color:#000;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    box-shadow:0 0 15px #00FFFF;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow:0 0 25px #00FFFF;
+}
 </style>
 </head>
 <body>
-<div class="container">
-<h1>شحن الألعاب</h1>
-<p>شحن سريع لجميع الألعاب العالمية.</p>
 
-<!-- قسم المونتاجات -->
+<h1>شحن الألعاب</h1>
+<div class="container">
 <div class="montages">
     <div class="montage-card">
         <img src="Free Fire.jfif" alt="Free Fire" onclick="openMontage('Free Fire.jfif')">
-        <a href="https://wa.me/212635825404?text=أريد+شراء+شحن+Free+Fire" target="_blank">
-            <button class="btn">اشحن الان</button>
-        </a>
+        <a href="https://wa.me/212635825404?text=أريد+شراء+شحن+Free+Fire" target="_blank"><button class="btn">شراء الآن</button></a>
     </div>
     <div class="montage-card">
         <img src="PUBG.jfif" alt="PUBG" onclick="openMontage('PUBG.jfif')">
-        <a href="https://wa.me/212635825404?text=أريد+شراء+شحن+PUBG" target="_blank">
-            <button class="btn">اشحن الان</button>
-        </a>
+        <a href="https://wa.me/212635825404?text=أريد+شراء+شحن+PUBG" target="_blank"><button class="btn">شراء الآن</button></a>
+    </div>
+    <div class="montage-card">
+        <img src="roblox.jfif" alt="Roblox" onclick="openMontage('roblox.jfif')">
+        <a href="https://wa.me/212635825404?text=أريد+شراء+شحن+Roblox" target="_blank"><button class="btn">شراء الآن</button></a>
     </div>
     <div class="montage-card">
         <img src="efootbal.jfif" alt="eFootball" onclick="openMontage('efootbal.jfif')">
-        <a href="https://wa.me/212635825404?text=أريد+شراء+شحن+eFootball" target="_blank">
-            <button class="btn">اشحن الان</button>
-        </a>
+        <a href="https://wa.me/212635825404?text=أريد+شراء+شحن+eFootball" target="_blank"><button class="btn">شراء الآن</button></a>
     </div>
 </div>
-
-<br>
-<a href="index.html"><button class="btn">رجوع للمتجر</button></a>
 </div>
 
-<script>
-function openMontage(src) {
-    const popup = document.createElement("div");
-    popup.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:flex; justify-content:center; align-items:center; z-index:1000;";
-    popup.innerHTML = `
-        <img src="${src}" style="max-width:90%; max-height:90%; border-radius:10px;">
-        <button class="btn" style="position:absolute; top:20px; right:20px;" onclick="this.parentElement.remove()">إغلاق</button>
-    `;
-    document.body.appendChild(popup);
-}
-</script>
-</body>
-</html>
+<h1>عروض شحن UC</h1>
+<div class="uc-cards">
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="30 UC">
+    <h3>30 UC</h3><p>10dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%2030%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="60 UC">
+    <h3>60 UC</h3><p>20dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%2060%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="325 UC">
+    <h3>325 UC</h3><p>65dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%20325%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="660 UC">
+    <h3>660 UC</h3><p>120dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%20660%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="720 UC">
+    <h3>720 UC</h3><p>130dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%20720%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="1015 UC">
+    <h3>1015 UC</h3><p>200dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%201015%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="1800 UC">
+    <h3>1800 UC</h3><p>270dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%201800%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="3850 UC">
+    <h3>3850 UC</h3><p>510dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%203850%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="uc8100.jpg" alt="8100 UC">
+    <h3>8100 UC</h3><p>1100dh</p>
+    <a href="https://wa.me/212635825404?text=أريد%208100%20UC" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+</div>
+
+<h1>عروض Robux</h1>
+<div class="uc-cards">
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="80 Robux">
+    <h3>80 Robux</h3><p>20dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+80+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="400 Robux">
+    <h3>400 Robux</h3><p>70dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+400+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="500 Robux">
+    <h3>500 Robux</h3><p>90dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+500+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="800 Robux">
+    <h3>800 Robux</h3><p>130dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+800+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="1000 Robux">
+    <h3>1000 Robux</h3><p>150dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+1000+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="1700 Robux">
+    <h3>1700 Robux</h3><p>260dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+1700+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="2000 Robux">
+    <h3>2000 Robux</h3><p>300dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+2000+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="4500 Robux">
+    <h3>4500 Robux</h3><p>650dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+4500+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+<div class="uc-card">
+    <img src="robux5250.jpg" alt="5250 Robux">
+    <h3>5250 Robux</h3><p>750dh bank 👾</p>
+    <a href="https://wa.me/212635825404?text=أريد+شراء+5250+Robux" target="_blank"><button class="btn">شراء عبر واتساب</button></a>
+</div>
+</div>
