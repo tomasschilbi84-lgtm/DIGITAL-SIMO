@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بطاقات الهدايا</title>
+<style>
+body { margin:0; padding:0; font-family:'Poppins',sans-serif; background: linear-gradient(135deg,#000,#001122); color:#fff; text-align:center;}
+.container { margin-top:50px; padding:20px;}
+img { width:300px; border-radius:10px; box-shadow:0 0 20px #00FFFF; margin-bottom:15px;}
+.btn { margin-top:10px; padding:12px 25px; background:linear-gradient(45deg,#00FFFF,#0080FF); color:#000; border:none; border-radius:10px; cursor:pointer; box-shadow:0 0 20px #00FFFF; transition: transform 0.3s, box-shadow 0.3s;}
+.btn:hover { transform:scale(1.05); box-shadow:0 0 30px #00FFFF;}
+.montages { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:30px; }
+.montage-card { display:flex; flex-direction:column; align-items:center; }
+.montages img { width:200px; height:120px; object-fit:cover; border-radius:10px; cursor:pointer; transition: transform 0.3s; }
+.montages img:hover { transform: scale(1.05); }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>بطاقات الهدايا</h1>
+<p>بطاقات متجر متنوعة ومتجددة.</p>
+
+<!-- قسم المونتاجات -->
+<div class="montages">
+    <div class="montage-card">
+        <img src="card steam.jfif" alt="Steam" onclick="openMontage('card steam.jfif')">
+        <a href="https://wa.me/212635825404?text=أريد+شراء+بطاقة+Steam" target="_blank">
+            <button class="btn">شراء الآن</button>
+        </a>
+    </div>
+    <div class="montage-card">
+        <img src="cart xbox.jfif" alt="Xbox" onclick="openMontage('cart xbox.jfif')">
+        <a href="https://wa.me/212635825404?text=أريد+شراء+بطاقة+Xbox" target="_blank">
+            <button class="btn">شراء الآن</button>
+        </a>
+    </div>
+    <div class="montage-card">
+        <img src="amazon.jfif" alt="Amazon" onclick="openMontage('amazon.jfif')">
+        <a href="https://wa.me/212635825404?text=أريد+شراء+بطاقة+Amazon" target="_blank">
+            <button class="btn">شراء الآن</button>
+        </a>
+    </div>
+</div>
+
+<br>
+<a href="index.html"><button class="btn">رجوع للمتجر</button></a>
+</div>
+
+<script>
+function openMontage(src) {
+    const popup = document.createElement("div");
+    popup.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:flex; justify-content:center; align-items:center; z-index:1000;";
+    popup.innerHTML = `
+        <img src="${src}" style="max-width:90%; max-height:90%; border-radius:10px;">
+        <button class="btn" style="position:absolute; top:20px; right:20px;" onclick="this.parentElement.remove()">إغلاق</button>
+    `;
+    document.body.appendChild(popup);
+}
+</script>
+</body>
+</html>

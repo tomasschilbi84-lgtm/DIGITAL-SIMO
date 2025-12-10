@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIGITAL SIMO - Store</title>
+<style>
+body {
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    background: linear-gradient(135deg,#000,#001122);
+    color:#fff;
+}
+header {
+    position: sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background: rgba(0,0,0,0.9);
+    box-shadow:0 0 10px #00FFFF;
+    backdrop-filter: blur(6px);
+}
+.logo {
+    font-size:24px;
+    font-weight:600;
+    color:#00FFFF;
+    text-shadow:0 0 10px #00FFFF;
+}
+nav ul {
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+nav a {
+    color:#fff;
+    text-decoration:none;
+    transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+    color:#00FFFF;
+    transform: scale(1.1);
+}
+.hero {
+    height:60vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: url('https://via.placeholder.com/1920x1080/000000/00FFFF?text=Digital+Banner') no-repeat center/cover;
+    text-align:center;
+}
+.hero h1 {
+    font-size:48px;
+    margin-bottom:20px;
+    text-shadow:0 0 15px #00FFFF;
+}
+.section-product {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    padding:50px 20px;
+    gap:40px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+.section-product img {
+    width:300px;
+    border-radius:15px;
+    box-shadow:0 0 20px #00FFFF;
+}
+.section-product .info {
+    max-width:400px;
+    text-align:left;
+}
+.section-product .info h2 {
+    font-size:32px;
+    margin-bottom:15px;
+    color:#00FFFF;
+}
+.section-product .info p {
+    margin-bottom:15px;
+}
+.btn {
+    background: linear-gradient(45deg, #00FFFF,#0080FF);
+    color:#000;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    box-shadow:0 0 15px #00FFFF;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.btn:hover {
+    box-shadow:0 0 25px #00FFFF;
+    transform: translateY(-3px);
+}
+footer {
+    text-align:center;
+    padding:20px;
+    background:#000;
+}
+.socials-footer {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:10px;
+}
+.socials-footer .social-icon {
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    transition: transform 0.3s;
+}
+.socials-footer .social-icon:hover {
+    transform: scale(1.2);
+}
+@media (max-width:768px) {
+    .section-product { flex-direction:column; }
+    .section-product img { width:80%; }
+    .section-product .info { text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">DIGITAL SIMO</div>
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#contact">التواصل</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>اكتشف عالم الخدمات الرقمية</h1>
+        <p>خدمات احترافية: شحن الألعاب، تطبيقات، بطاقات هدايا، زيادة متابعين، حسابات بيس</p>
+        <button class="btn">خدماتنا</button>
+    </div>
+</section>
+
+<section id="products">
+
+    <!-- حسابات بيس -->
+    <div class="section-product">
+        <img src="logo pes.jpg" alt="حسابات بيس">
+        <div class="info">
+            <h2>حسابات بيس</h2>
+            <p>أفضل حسابات بيس جاهزة بجودة عالية.</p>
+            <button class="btn" onclick="window.location.href='pes.html'">استكشف</button>
+        </div>
+    </div>
+
+    <!-- شحن الألعاب -->
+    <div class="section-product">
+        <img src="shop game.png" alt="شحن الألعاب">
+        <div class="info">
+            <h2>شحن الألعاب</h2>
+            <p>شحن سريع لجميع الألعاب العالمية.</p>
+            <button class="btn" onclick="window.location.href='games.html'">استكشف</button>
+        </div>
+    </div>
+
+    <!-- زيادة متابعين -->
+    <div class="section-product">
+        <img src="followrs.png" alt="زيادة متابعين">
+        <div class="info">
+            <h2>زيادة متابعين</h2>
+            <p>زيادة حقيقية وآمنة لمواقع التواصل.</p>
+            <button class="btn" onclick="window.location.href='followers.html'">استكشف</button>
+        </div>
+    </div>
+
+    <!-- بطاقات الهدايا -->
+    <div class="section-product">
+        <img src="gift card.jfif" alt="بطاقات الهدايا">
+        <div class="info">
+            <h2>بطاقات الهدايا</h2>
+            <p>بطاقات متجر متنوعة ومتجددة.</p>
+            <button class="btn" onclick="window.location.href='giftcards.html'">استكشف</button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div class="socials-footer">
+        <a href="https://www.instagram.com/simo_digital_products/#" target="_blank">
+            <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://m.facebook.com/profile.php?id=459791881463761&wtsid=rdr_0YhN5ipbtg9FhY13v&hr=1" target="_blank">
+            <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+        </a>
+    </div>
+    <p>&copy; 2023 DIGITAL SIMO. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>
